@@ -1,1 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cricket Game</title>
+  <link rel="stylesheet" href="Cricket.css">
+</head>
+<body>
 
+    <div id="main">
+      <div class="header">
+        <h1>Bat Ball Stump Game</h1>
+        <img src="Baseball player standing with baseball bat and ball.png" alt="">
+      </div>
+      
+      
+      <div class="parent">
+        <p>Choose one option to play against the computer:</p>
+        <div class="computerChoice">
+          <input type="text" id="computerChoice"  readonly>
+          <h3>computerChoice</h3>
+        </div>
+        <div class="userChoice">
+          <input type="text" id="UserChoice" readonly>
+          <h3>UserChoice</h3>
+        </div>   
+        <div class="result" id="result" readonly>
+          <input type="text" id="resultMsg" readonly>
+          <h3>Result-message</h3>
+        </div>
+      </div>
+      <div class="child">
+          <button class="button" onclick="
+          currentuserchoice ='Bat'
+          document.querySelector('#UserChoice').value = currentuserchoice;
+
+          //This will generate random number between 0 and 3
+          let randomNumber = Math.random() * 3;
+          let computerChoice;
+          if (randomNumber > 0 && randomNumber <= 1) {
+            computerChoice = 'Bat';
+            // console.log('computer   choice is Bat');
+          } else if (randomNumber > 1 && randomNumber <= 2) {
+            computerChoice = 'Ball';
+            // console.log('computer choice is Ball');
+          } else {
+            computerChoice = 'Stump' 
+            // console.log('computer choice is Stump');
+          }
+          currentComputerChoice = computerChoice;
+          document.querySelector('#computerChoice').value = currentComputerChoice;
+
+          let resultMsg;
+          if (computerChoice === 'Ball') {
+            resultMsg = 'User won.';
+          } else if (computerChoice === 'Bat') {
+            resultMsg = `It's a tie`;
+          } else if (computerChoice === 'Stump') {
+            resultMsg = 'Computer has won';
+          }
+
+
+          currentResultMsg = resultMsg;
+          document.querySelector('#resultMsg').value = currentResultMsg;
+
+
+          
+          ">Bat</button>
+
+
+          <button class="button" onclick="
+
+          currentuserchoice ='Ball'
+          document.querySelector('#UserChoice').value = currentuserchoice;
+
+          //This will generate random number between 0 and 3
+          randomNumber = Math.random() * 3;
+          if (randomNumber > 0 && randomNumber <= 1) {
+            computerChoice = 'Bat';
+            // console.log('computer choice is Bat');
+          } else if (randomNumber > 1 && randomNumber <= 2) {
+            computerChoice = 'Ball';
+            // console.log('computer choice is Ball');
+          } else {
+            computerChoice = 'Stump'
+            // console.log('computer choice is Stump');
+          }
+          currentComputerChoice = computerChoice;
+          document.querySelector('#computerChoice').value = currentComputerChoice;
+
+          if (computerChoice === 'Ball') {
+            resultMsg = `It's a tie`;
+          } else if (computerChoice === 'Bat') {
+            resultMsg = 'Computer has won';
+          } else if (computerChoice === 'Stump') {
+            resultMsg = 'User won.';
+          }
+
+          currentResultMsg = resultMsg;
+          document.querySelector('#resultMsg').value = currentResultMsg;
+          
+          ">Ball</button>
+
+          <button  class="button" onclick="
+          currentuserchoice ='Stump'
+          document.querySelector('#UserChoice').value = currentuserchoice;
+        
+          //This will generate random number between 0 and 3
+          randomNumber = Math.random() * 3;
+          if (randomNumber > 0 && randomNumber <= 1) {
+            computerChoice = 'Bat';
+            // console.log('computer choice is Bat');
+          } else if (randomNumber > 1 && randomNumber <= 2) {
+            computerChoice = 'Ball';
+            // console.log('computer choice is Ball');
+          } else {
+            computerChoice = 'Stump'
+            // console.log('computer choice is Stump');
+          }
+          currentComputerChoice = computerChoice;
+          document.querySelector('#computerChoice').value = currentComputerChoice;
+
+          if (computerChoice === 'Ball') {
+            resultMsg = 'Computer has won';
+          } else if (computerChoice === 'Bat') {
+            resultMsg = 'User won.';
+          } else if (computerChoice === 'Stump') {
+            resultMsg = `It's a tie`;
+          }
+          currentResultMsg = resultMsg;
+          document.querySelector('#resultMsg').value = currentResultMsg;
+
+          
+          
+          ">Stump</button>
+
+      </div>
+    </div>
+</body>
+</html>
